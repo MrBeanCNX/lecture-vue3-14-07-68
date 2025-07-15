@@ -167,6 +167,7 @@
   // computed ทำงานเฉพาะเมื่อ state ของตัวเองมีการ reactive
   const doubleComputed = computed(() => {
     console.log('Computed Run')
+    // ห้ามยิง API ใช้สำหรับ return ค่าเท่านั้น
     return mainNumBer.value * 2
   })
   // function ทำงานทุกครั้งที่ state ใด ๆ มีการ reactive
@@ -186,6 +187,7 @@
   const watch2 = ref('watch2')
   // Watch
   watch(watch1, (newValue, oldValue) => {
+    // ยิง API
     console.log('ทำงานเมื่อ watch1 เปลี่ยน')
     console.log('เปลี่ยนจาก', oldValue, 'เป็น', newValue)
   })
