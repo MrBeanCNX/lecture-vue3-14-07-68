@@ -60,6 +60,16 @@ const router = createRouter({
       name: 'LoginPage',
       component: () => import('../views/LoginPage.vue'),
     },
+    {
+      path: '/basic-composable',
+      name: 'ComposablePage',
+      component: () => import('../views/ComposablePage.vue'),
+    },
+    {
+      path: '/basic-pinia',
+      name: 'PiniaPage',
+      component: () => import('../views/PiniaPage.vue'),
+    },
   ]
 })
 
